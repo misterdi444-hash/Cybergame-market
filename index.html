@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CyberGame Market</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CyberGame Market</h1>
+            <div class="lang-switcher">
+                <button id="btn-ua" class="lang-btn active">UA</button>
+                <button id="btn-en" class="lang-btn">EN</button>
+            </div>
+        </header>
+
+        <section class="games-section">
+            <h2><span class="icon">🎮</span> <span class="title-text" data-key="games_title">Ігри</span></h2>
+            <div class="games-grid" id="games-grid">
+                <!-- Ігри будуть додані JS -->
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2><span class="icon">📊</span> <span class="title-text" data-key="table_title">Таблиця ігор</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th><span data-key="table_game">Гра</span></th>
+                        <th><span data-key="table_genre">Жанр</span></th>
+                        <th><span data-key="table_price">Ціна</span></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Дані додає JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="video-section">
+            <h2><span class="icon">🎥</span> <span class="title-text" data-key="trailer_title">Трейлер</span></h2>
+            <div class="video-wrapper">
+                <iframe id="trailer-video" width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/QkkoHAzjnUs" 
+                    title="GTA V Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <h2><span class="icon">📧</span> <span class="title-text" data-key="contacts_title">Контакти</span></h2>
+            <p><span data-key="contact_email_label">Email:</span> <a href="mailto:cybergame@gmail.com">cybergame@gmail.com</a></p>
+        </section>
+
+        <section class="order-section" id="order-section" style="display:none;">
+            <h2><span class="icon">🛒</span> <span class="title-text" data-key="order_title">Форма замовлення</span></h2>
+            <form id="order-form">
+                <input type="text" id="order-name" name="name" placeholder="Name" required />
+                <input type="email" id="order-email" name="email" placeholder="Email" required />
+                <select id="order-game" name="game" required>
+                    <!-- Опції додасть JS -->
+                </select>
+                <button type="submit" class="btn-neon"><span data-key="order_submit">Замовити</span></button>
+                <button type="button" id="order-cancel" class="btn-cancel"><span data-key="order_cancel">Скасувати</span></button>
+            </form>
+            <div id="order-success" style="display:none; margin-top:1em; color:#0f0; font-weight:bold;"></div>
+        </section>
+
+        <footer>
+            <p>© 2026 CyberGame Market</p>
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
